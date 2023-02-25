@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/e3f461dde5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Dictonary</title>
+</head>
+
+<body class="bg-gradient-to-r from-[#1d0042] to-[#380554] h-screen flex items-center justify-center">
+
+
+    <main class="w-full">
+        <section>
+            <div>
+                <div class="w-[768px] mx-auto">
+                    <div class="flex mb-7">
+                        <input id="search-filed" type="text" placeholder="Search Any Word"
+                            class="input input-bordered input-primary w-full glass rounded-none text-white" />
+                        <button id="search-btn" class="btn btn-warning rounded-none">Search</button>
+                    </div>
+
+
+                    <div id="result-box" class="p-8 border border-5 border-yellow-300">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h2 id="search-word" class="text-white text-4xl font-bold">Keyord</h2>
+                                <h6 id="phonetic" class="text-yellow-300 text-2xl"></h6>
+                            </div>
+
+                            <button onclick="play()"
+                                class="text-yellow-300 text-3xl btn p-0 rounded-full bg-[#2f034e] hover:bg-[#2f034e]">
+                                <i class="fa-solid fa-circle-play"></i>
+                                <audio id="pronounce-audio" src=""></audio>
+                            </button>
+                        </div>
+                        <div id="details-wrapper">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="app.js"></script>
+    <script src="search.js"></script>
+</body>
+
+</html>
